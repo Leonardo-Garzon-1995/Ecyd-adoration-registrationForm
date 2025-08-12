@@ -1,0 +1,125 @@
+:root {
+    --background-primary: #DCA85D;
+    --background-accent: #B5651D;
+    --deep-shadow: #5A3A1A;
+    --highlight: #F5E3B3;
+
+    --text-primary: #3B2B21;
+    --text-body: #4D3B31;
+    --text-light: #FAF4E6;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(public/background.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    font-family: 'Josefin Sans', sans-serif;
+    /* font-family: 'Lora', serif; */
+}
+
+h1 {
+    text-align: center;
+    font-size: 6rem;
+    font-weight: 800;
+    padding: 10px;
+    color: var(--text-light);
+    margin: 50px auto 20px;
+}
+
+.wrapper {
+    border: 3px solid var(--highlight);
+    max-width: 450px;
+    margin: 10px auto;
+    padding: 20px;
+    border-radius: 20px;
+    height: 550px;
+    backdrop-filter: blur(2px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.wrapper:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 8px 3px var(--background-primary);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    font-size: 3rem;
+    color: var(--text-body);
+    margin: 15px auto;
+    padding: 5px;
+}
+
+.inputs-container {
+    display: flex;
+    flex-direction: column;
+    padding: 2px;
+}
+
+label {
+    border: 2px solid var(--highlight);
+    margin: 15px auto;
+    padding: 5px;
+    font-size: 1.8em;
+    border-radius: 20px;
+    align-items: center;
+    color: var(--text-light);
+
+
+}
+
+.register-input { 
+    background: none;
+    margin: 5px auto;
+    border: none;
+    padding: 15px;
+    color: inherit;
+    font-size: 20px;
+}
+
+.register-input:focus {
+    outline: none;
+}
+
+.register-input:-webkit-autofill,
+.register-input:-webkit-autofill:hover,
+.register-input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 1000px transparent inset;
+    box-shadow: 0 0 0 1000px transparent inset;
+    -webkit-text-fill-color: var(--text-light);
+    transition: background-color 9999s ease-in-out 0s; /* Prevent flash */
+}
+
+.submit-btn {
+    background-color: var(--background-primary);
+    border: 2px solid var(--background-primary);
+    border-radius: 20px;
+    margin: 5px auto;
+    font-size: 30px;
+    padding: 5px 10px;
+    color: var(--text-primary);
+    transition: 0.3s ease;
+
+}
+
+.submit-btn:hover {
+    background: none;
+    color: var(--text-light);
+}
+
+.submit-btn:active {
+    transform: scale(1.05);
+}
